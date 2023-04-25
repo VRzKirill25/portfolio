@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Styles/Style.css">
+    <!-- <link rel="stylesheet" href="animate.css"> -->
+    <script>
+        var a
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <a href="login.html">Автаризоваться</a>
+
+        <div id="filter">
+            <button class="filteropen" v-on:click="openmenu">Фильтр</button>
+            <div class="menu" v-bind:class="[menu?'openmenu':'ivis']">
+                <div class="filtermenu">
+
+                    <div class="selectclass"><b>ТЭГ</b>
+                        <div id="stylescroll" class="stylestegs">
+                            <div class="combomenu" v-for="option in optionsone">
+                                <input type="checkbox"><b>{{option.text}}</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selectclass"><b>ИГРА</b>
+                        <div id="stylescroll" class="stylestegs">
+                            <div class="combomenu" v-for="option in optionstwo">
+                                <input type="checkbox"><b>{{option.text}}</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selectclass"><b>ВОЗРАСТ</b>
+                        <div id="stylescroll" class="stylestegs">
+                            <div class="combomenu" v-for="option in optionsthree">
+                                <input type="checkbox"><b>{{option.text}}</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="apply" v-on:click="apply"><b>ПРИМЕНИТЬ</b></div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="backfon">
+        <div class="box1"></div> <div class="box2"></div>
+    </div>
+
+    <main>
+        <div id="stylescrollcard" class="cardmenu">
+            <div class="cardposition" id="users">
+
+                <div class="cards" v-for="card in cards">
+                    <div class="logouser">
+                        <div class="name"><b>{{card.username.text}}</b></div>
+                    </div>
+
+                    <div class="tegsuser">
+                        <div class="tegs"><b>{{card.tegs.text}}</b></div>
+                        <div class="game"><b>{{card.game.text}}</b></div>
+                        <div class="age"><b>{{card.age.text}}</b></div>
+                    </div>
+
+                    <div class="infouser">
+                        <b>{{card.infouser.text}}</b>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="JavaS.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- <script>
+            new.WOW().init();
+        </script>
+        https://animate.style/#usage -->
+</body>
+
+</html>

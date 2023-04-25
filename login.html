@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Автаризация</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="Styles/loders.css">
+   <link rel="stylesheet" href="Styles/logreg.css">
+</head>
+
+<body>
+   <div id="app">
+      <form v-on:submit.prevent="login" method="post">
+
+         <div class="formuser">
+
+            <section class="first">
+               <label for="email">Email</label>
+               <input v-model="email" type="email" name="email" id="email">
+            </section>
+
+            <section class="second">
+               <label for="password">Пароль</label>
+               <input v-model="password" type="password" name="password" id="password">
+            </section>
+
+            <input class="buttonlog" type="submit" value="Войти">
+
+            <div class="backfon" v-if="login">
+               <div class="cube-loader">
+                  <div class="cube-top"></div>
+                  <div class="cube-wrapper">
+                     <span style="--i:0" class="cube-span"></span>
+                     <span style="--i:1" class="cube-span"></span>
+                     <span style="--i:2" class="cube-span"></span>
+                     <span style="--i:3" class="cube-span"></span>
+                  </div>
+               </div>
+            </div>
+
+            <a href="register.html" class="regorlog">Зарегистрироваться</a>
+
+            <a class="backup" href="index.html">Вернуться</a>
+
+         </div>
+
+      </form>
+   </div>
+
+
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <script src="JavaS.js"></script>
+</body>
+
+</html>

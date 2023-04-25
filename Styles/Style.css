@@ -1,0 +1,223 @@
+*,
+body {
+  font-family: 'Fugaz One', cursive;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.ivis {
+  display: none;
+}
+header {
+  position: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  background: rgb(46, 46, 46);
+  padding: 8px 0 8px 0;
+  z-index: 50;
+}
+header a, header button{
+  background: none;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 12px 0 6px;
+  padding: 4.5px;
+  border: 3px solid black;
+  border-radius: 12px;
+  transition: 350ms;
+}
+header a:hover, header button:hover{
+  background: white;
+  color: black;
+}
+.filtermenu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 24px;
+}
+.menu {
+  top: 8px;
+}
+.openmenu {
+  position: absolute;
+  position: fixed;
+  width: 1200px;
+  height: 520px;
+  background: rgb(46, 46, 46);
+  top: 16px;
+  left: 50%;
+  border-radius: 12px;
+  box-shadow: 0 0 48px black;
+  transform: translateX(-50%);
+  animation: color 6s infinite cubic-bezier(1, 0.15, 0, 0.8);
+}
+/* @keyframes color {
+  0%{ background: rgb(46, 46, 46);
+      width: 1200px;
+      height: 500px; }
+  25%{ background: red;
+       width: 1500px;
+       height: 600px; }
+  50%{ background: rgb(0, 89, 255);
+       width: 1200px;
+       height: 700px; }
+  75%{ background: rgb(0, 184, 0);
+       width: 1500px;
+       height: 600px; }
+  100%{ background: rgb(46, 46, 46);
+        width: 1200px;
+        height: 500px; }
+} */
+.selectclass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.333%;
+  margin: 12px 0 0 0;
+}
+#stylescroll::-webkit-scrollbar{
+  width: 8px;
+}
+#stylescroll::-webkit-scrollbar-track-piece{
+  background: #ebedf1;
+  border-radius: 8px;
+}
+#stylescroll::-webkit-scrollbar-thumb{
+  background:#7f8c8d;
+  border-radius: 8px;
+}
+.stylestegs{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 6px;
+  border: 3px solid black;
+  border-radius: 8px;
+  overflow: auto;
+}
+.combomenu{
+  display: flex;
+  align-items: center;
+  width: 240px;
+}
+.combomenu > b{
+  margin: 4px 0 4px 8px; 
+}
+.apply{
+  font-size: 18px;
+  margin: 12px 0 0 0;
+  padding: 3.5px;
+  border: 3px solid black;
+  border-radius: 12px;
+  transition: 350ms;
+}
+.apply:hover{
+  background: white;
+}
+main{
+  position: relative;
+  z-index: 20;
+}
+#stylescrollcard::-webkit-scrollbar{
+  width: 14px;
+}
+#stylescrollcard::-webkit-scrollbar-track-piece{
+  background: #ebedf1;
+}
+#stylescrollcard::-webkit-scrollbar-thumb{
+  background:#34393a;
+  transition: 350ms;
+}
+#stylescrollcard::-webkit-scrollbar-thumb:hover{
+  background:#7f8c8d;
+}
+.cardmenu{
+  display: flex;
+  justify-content: center;
+  height: 916px;
+  width: 100%;
+  overflow: auto;
+}
+.cardposition{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 88%;
+  margin: 16px 0 0 0;
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 380px;
+  height: 240px;
+  margin: 16px 0 16px 0;
+  border: 3px solid black;
+  border-radius: 12px;
+}
+.logouser, .tegsuser, .infouser{
+  display: flex;
+  margin-top: 16px;
+}
+.name, .infouser{
+  font-size: 20px;
+}
+.infouser{
+  display: flex;
+  align-items: center;
+  height: 50%;
+  padding: 0 16px 0 16px;
+}
+.tegs, .game, .age{
+  margin: 2px;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.backfon{
+  position: relative;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 115%;
+  margin: 0 0 0 75%;
+  transform: rotate(30deg);
+  z-index: 5;
+}
+.box1{
+  position: absolute;
+  height: 2500px;
+  width: 160px;
+  background: rgba(128, 128, 128, 0.555);
+  animation: red 12s infinite ease-in-out;
+  /* cubic-bezier(0.8, 0.21, 0.21, 0.8) */
+}
+@keyframes red{
+  0%{ width: 160px; }
+  50%{ width: 320px; }
+  100%{ width: 160px; }
+}
+.box2{
+  position: absolute;
+  height: 2500px;
+  width: 100px;
+  background: rgba(0, 0, 0, 0.555);
+  animation: orange 24s infinite ease-in-out;
+}
+@keyframes orange{
+  0%{ width: 100px; }
+  50%{ width: 140px; }
+  100%{ width: 100px; } 
+}
+@media (min-width: 1921px) {
+  .cardmenu{
+    height: 1026px;
+  }
+}
