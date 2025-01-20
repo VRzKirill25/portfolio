@@ -57,7 +57,7 @@ header a:hover, header button:hover{
   transform: translateX(-50%);
   animation: color 6s infinite cubic-bezier(1, 0.15, 0, 0.8);
 }
-/*@keyframes color {
+@keyframes color {
   0%{ background: rgb(46, 46, 46);
       width: 1200px;
       height: 500px; }
@@ -73,7 +73,7 @@ header a:hover, header button:hover{
   100%{ background: rgb(46, 46, 46);
         width: 1200px;
         height: 500px; }
-}*/
+}
 .selectclass{
   display: flex;
   flex-direction: column;
